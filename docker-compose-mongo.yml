@@ -6,12 +6,12 @@ services:
   mongo:
     image: mongo
     container_name: mosh-mongo
-    restart: always
+    restart: "no"
     environment:
       MONGO_INITDB_ROOT_USERNAME: ''
       MONGO_INITDB_ROOT_PASSWORD: ''
     ports:
       - "27017:27017"
     volumes:
-      - /home/ion/docker-storage/mongo/data/db:/data/db
-      - /home/ion/docker-storage/mongo/data/configdb:/data/configdb
+      - /home/ion/docker/mongo/data/db:/data/db
+      - /home/ion/docker/mongo/data/configdb:/data/configdb
